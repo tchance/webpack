@@ -53,9 +53,9 @@ var webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: {{#if_or unit e2e}}process.env.NODE_ENV === 'testing'
-        ? 'index.html'
+        ? 'index.php'
         : {{/if_or}}config.build.index,
-      template: 'index.html',
+      template: 'index.php',
       inject: true,
       minify: {
         removeComments: true,
